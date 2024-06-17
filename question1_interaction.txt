@@ -1,0 +1,78 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Moubin Ali Mohammed
+%%%%% NAME: Pierre salama
+%%%%% NAME: Roupen Kaloustian
+%
+% Add your interaction below
+
+QUERY 1:
+?- product(X, M, laptop, _264, _265), inStock(X, StoreName, Count), Count > 0.
+X = rog_strix
+M = asus
+StoreName = montreal_computer_shack
+Count = 3
+Yes (0.00s cpu, solution 1, maybe more)
+X = legion
+M = lenovo
+StoreName = scarborough_town_centre_computer_shack
+Count = 4
+Yes (0.03s cpu, solution 2, maybe more)
+
+QUERY 2:
+?- inStock(three_hdmi_cord, StoreName, Count), location(StoreName, montreal), Count > 0.
+StoreName = montreal_computer_shack
+Count = 3
+Yes (0.00s cpu)
+
+QUERY 3:
+?- inStock(galaxy_tab_10, square_one_computer_shack, Count).
+Count = 10
+Yes (0.00s cpu)
+
+QUERY 4:
+?- location(Store, mississauga), product(X, _114, laptop, _116, _117), inStock(X, Store, Count), Count > 0, not canShip(X, toronto).
+Store = south_common_center_computer_shack
+X = legion
+Count = 6
+Yes (0.00s cpu, solution 1, maybe more)
+
+QUERY 5:
+?- canShip(X, toronto), product(X, _114, monitor, P, _117), not (canShip(X2, toronto), product(X2, _155, monitor, P2, _158), not X = X2, P2 =< P).
+X = msi_pro
+P = 159.99
+X2 = X2
+P2 = P2
+Yes (0.00s cpu, solution 1, maybe more)
+
+QUERY 6:
+?- product(X, _102, tablet, _104, R), R >= 4, inStock(X, eaton_centre_computer_shack, Count), Count > 0.
+X = surface_go_pro
+R = 4.1
+Count = 3
+Yes (0.00s cpu, solution 1, maybe more)
+
+QUERY 7:
+?- product(X, _189, laptop, P, _192), location(Store1, toronto), location(Store2, toronto), not Store1 = Store2, inStock(X, Store1, C1), C1 > 0, inStock(X, Store2, C2), C2 > 0.
+No (0.05s cpu)
+
+QUERY 8:
+?- product(PR, _104, tablet, P, R), P < 600, R >= 4.
+PR = surface_go
+P = 499.99
+R = 4.1
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+QUERY 9:
+?- product(X, _97, laptop, _99, _100), canShip(X, mississauga), inStock(X, square_one_computer_shack, C).
+X = blade
+C = 5
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+QUERY 10:
+?- product(X, _108, tablet, P, R), R >= 4, not (product(X2, _150, tablet, P2, R2), not X = X2, R2 >= 4, P2 =< P1), canShip(X, _188).
+Abort

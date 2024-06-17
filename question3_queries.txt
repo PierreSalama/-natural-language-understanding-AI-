@@ -1,0 +1,49 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Moubin Ali Mohammed
+%%%%% NAME: Pierre salama
+%%%%% NAME: Roupen Kaloustian
+%
+% Add your test queries below. Ensure that the line before each query describes the query in plain
+% English.For example, if you want to add the query "pred(X, constant).", it should appear as follows:
+% 
+% % Retrieves the block that is on top of blockA
+% QUERY 2: on(X, blockA).
+%
+% where 2 is the number of the query. Omit the "%" on the QUERY line below.
+% Don't forget to end queries with a period.
+
+% Query description: what is the highest rated tablet, rated being over 4.5
+QUERY 1: what([a,highly_rated,tablet], P).
+
+% Query description: what is the highest rated monitor found in a store at mississauga, rated being over 4.5
+QUERY 2: what([a,highly_rated,monitor,in, the, stock,at,a,store,in,mississauga], P).
+
+% Query description: what is the cheapest apple laptop.
+QUERY 3: what([the,cheapest,apple,laptop], P).
+
+% Query description: what is the most expensive dell laptop.
+QUERY 4: what([the,expensive,dell,laptop], P).
+
+% Query description: what is a tablet that can be shipped to toronto.
+QUERY 5: what([a,tablet,that_can_ship_to,toronto], P).
+
+% Query description: what is a monitor that can be shipped to toronto.
+QUERY 6: what([a,monitor,that_can_ship_to,toronto], P).
+
+% Query description: what is the most lowly rated tablet.
+QUERY 7: what([a,lowly_rated,tablet], P).
+
+% Query description: what is the lowlt rated tablet that can be shipped to toronto.
+QUERY 8: what([a,lowly_rated,tablet,that_can_ship_to,toronto], P).
+
+% Query description: what is the cheapest monitor.
+QUERY 9: what([the,cheapest,monitor], P).
+
+% Query description: what is the cheapest phone.
+QUERY 10: what([the,cheapest,phone], P).
+
+%%%%% END
+% DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
